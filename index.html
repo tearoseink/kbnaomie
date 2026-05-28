@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="'viewport" content="device-width, initial-scale=1.0"/>
+        <title>A Backyard Art Show</title>
+        <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+        <style>
+            *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+            :root{
+                --ink: #ffff; 
+                --ink-light: #6b6560; 
+                --paper: #000000;  
+                --accent: #80bdff;
+                --accent-dark: #007aff;
+                --accent-pink: #c0b5b1; 
+                --max: 720px; 
+            }
+
+            html {font-size: 18px; scroll-behavior: smooth; }
+
+            body{
+                background: var(--paper); 
+                color: var(--ink); 
+                font-family: 'Trebuchet MS', Georgia, serif;
+                line-height: 1.75;
+                -webkit-font-smoothing: antialiased; 
+            }
+
+            /*--HEADER--*/
+            header {
+                padding: 2.5rem 2rem 1.5rem;
+                text-align: center;
+                position: sticky;
+                top: 0;
+                background-color: var(--paper);
+                z-index: 100;
+            }
+            .site-title {
+                font-family: 'Special Elite', cursive;
+                font-size: 1.9rem; 
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                color: var(--accent); 
+                text-decoration: none;
+            }
+            /*--DIVIDER--*/
+            .divider {
+                display: block; 
+                width: 40%; 
+                margin: 0 auto 0; 
+                height: 4rem;
+            }
+
+            /*--NAVIGATION--*/
+            nav {
+                margin-top: 1rem;
+                display: flex; 
+                justify-content: center;
+                flex-wrap: wrap; 
+                gap: 0.75rem 1.5em; 
+            }
+            nav a {
+                font-size: 0.75em; 
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--accent); 
+                text-decoration: none;
+                transition: color 0.2s; 
+            }
+            nav a:hover {color: var(--ink)}
+
+            /*--SUMMERSOUL--*/
+            .soul-wrapper {
+                max-width: 680px;
+                margin: 2rem auto 4rem; 
+                padding: 0 2rem; 
+                animation: fadeUp 1s ease both; 
+            }
+            .soul-meta {
+                display:flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem 1.5rem; 
+                margin-top: 1.75rem;
+                padding-bottom: 1.75rem;
+                border-bottom: 1px solid var(--accent-pink);
+            }
+            .soul-item {
+                font-size: 0.65rem; 
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--ink-light);
+            }
+            .soul-item span {
+                display: block;
+                color: var(--ink-light);
+                margin-top: 0.2rem; 
+                font-size: 0.72rem;
+            }
+            .soul-divider  {
+                width: 1px;
+                height: 2rem;
+                background-color: var(--ink-light);
+            }
+            .soul-body p {
+                font-size: 0.8rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                color: var(--accent-pink);
+            }
+            .special {
+                color:var(--accent); 
+                font-weight: bold;
+            }
+            /*--RERGISTRATION--*/
+            .registration {
+                max-width: var(--max);
+                margin: 5rem auto 3rem;
+                padding: 0 2rem;
+                text-align: center;
+                animation: fadeUp 1s ease both;
+            }
+            .registration-title {
+                font-family: 'Special Elite', cursive;
+                font-size: clamp(2rem, 6vw, 2.2rem); 
+                font-weight: 100;
+                line-height: 1.25;
+                color: var(--ink) 
+            }
+
+            .btn {
+                display: inline-block; 
+                margin-top: 1rem; 
+                padding: 0.6rem 1.6rem; 
+                border: 1px solid var(--ink-light); 
+                color: var(--ink);
+                text-decoration: none; 
+                font-size: 0.70rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                transition: background 0.2s, color 0.2s; 
+                background-color: var(--ink-light);
+            }
+
+            .btn:hover {background: var(--accent); color:var(--ink)}
+
+            /*--FOOTER--*/
+            footer {
+                padding: 2rem;
+                text-align: center;
+                font-size: 0.8rem;
+                letter-spacing: 0.05rem;
+                color: var(--accent);
+                font-family: 'Special Elite', cursive;
+            }
+            /*--ANIMATIONS--*/
+            @keyframes fadeUp {
+                from {opacity: 0; transform: translateY(18px);}
+                to {opacity: 1; transform: translateY(0);}
+            }
+            /*--RESPONSIVENESS--*/
+            @media (max-width: 560px) {
+                header {padding: 1.5rem 1rem 1rem;}
+                .site-title {font-size: 1.5rem;}
+                nav {gap: 0.5rem 1rem;}
+                nav a {font-size: 0.7rem;}
+                .hero {margin-top: 2.5rem;}
+            }
+        </style>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div class="site-title-wrapper">
+                <a class="site-title" href="index.html">A Backyard Art Show</a>
+            </div>
+            <nav>
+                <a href="about.html">About</a>
+            </nav>
+            <img src="alt stars (4).svg" alt="string star banner" class="divider">
+        </header>
+        <!-- SUMMERSOUL SECTION -->
+        <section class="soul-wrapper">
+            <div class="soul-header">
+                <img src="summersoul.svg" alt="picture of watercolor">
+            </div>
+            <div class="soul-meta">
+                <div class="soul-item">Date<span>June 27th, 2026</span></div>
+                <div class="soul-divider"></div>
+                <div class="soul-item">Time<span>7pm-Midnight</span></div>
+                <div class="soul-divider"></div>
+                <div class="soul-item">Location<span>Eagle Rock, CA</span></div>
+                <div class="soul-divider"></div>
+                <div class="soul-item">Theme<span>SummerSoul</span></div>
+            </div>
+            <div class="soul-body">
+                <p><span class=special>SummerSoul (noun)</span>: Blue, the sound of stars, neon lights reflecting off a pool at night, the silhouette of a tree in your window, cold beer with friends at the lake.</p>
+                <p>Features: Sunsets, a garden party, paintings by KBNAOMIE, wine, beer, and a playlist featuring artists like Donna Summers, Vince Staples, Lenny Kravitz, Daft Punk, James Brown....</p>
+                <p>Theme: Blue, violet, neon green, glitter, black</p>
+            </div>
+        </section>
+        <!-- REGISTRATION -->
+        <section class="registration">
+            <p class="registration-title">Register Now</p>
+            <a class="btn" href="https://tally.so/r/ZjGZko">Get Tickets</a>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <p>KBNAOMIE</p>
+        </footer>
+    </body>
+</html>
